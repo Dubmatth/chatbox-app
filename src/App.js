@@ -4,7 +4,9 @@ import './App.css'
 class App extends Component {
   render () {
     return (
-      <div className='box' />
+      <div className='box'>
+        <h2>App</h2>
+      </div>
     )
   }
 }

@@ -4,8 +4,22 @@ import './index.css'
 import App from './App'
 import Connexion from './Components/Connexion'
 import * as serviceWorker from './serviceWorker'
+import NotFound from './Components/NotFound';
 
-ReactDOM.render(<Connexion />, document.getElementById('root'))
+import { BrowserRouter, Route, Switch  } from 'react-router-dom'
+
+const Root = () => (
+    <BrowserRouter>
+        <Switch>
+            <Route exact path='/' component={ Connexion } />
+            <Route path='/pseudo/:pseudo' component={ App } />
+            <Route component={ NotFound } />
+
+        </Switch>
+    </BrowserRouter>
+)
+
+ReactDOM.render(<Root />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
