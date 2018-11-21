@@ -7,7 +7,7 @@ class App extends Component {
 
   state = {
     messages: {},
-    pseudo: this.props.match.params.pseudo 
+    pseudo: this.props.match.params.pseudo, 
   }
 
   addMessage = message => {
@@ -23,7 +23,8 @@ class App extends Component {
           <div className="messages">
             <Message />
           </div>
-          <Formulaire 
+          <Formulaire
+            length={140} 
             addMessage={this.addMessage} 
             pseudo={this.state.pseudo}
           />
