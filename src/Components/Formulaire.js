@@ -15,7 +15,7 @@ class Formulaire extends Component {
         }
         addMessage(message)
 
-        this.setState({ message: '', length: this.props.length })
+        this.setState({ message: '', length: length })
     }
 
     onSubmit = event => {
